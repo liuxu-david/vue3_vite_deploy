@@ -15,13 +15,13 @@ jobs:
                   npm ci # 安装依赖
                   npm run build # 构建项目
 
-# 下面是部署操作
+            # 下面是部署操作
             - name: Upload dist to server
               uses: burnett01/rsync-deployments@5.2
               with:
-                switches: -avzr --delete
-                path: dist/
-                remote_path: ${{ secrets.SERVER_PATH }}
-                remote_host: ${{ secrets.SERVER_IP }}
-                remote_user: ${{ secrets.SERVER_USER }}
-                remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  switches: -avzr --delete
+                  path: dist/
+                  remote_path: ${{ secrets.SERVER_PATH }}
+                  remote_host: ${{ secrets.SERVER_IP }}
+                  remote_user: ${{ secrets.SERVER_USER }}
+                  remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
