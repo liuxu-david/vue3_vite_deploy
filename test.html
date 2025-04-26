@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .scrollbox {
+      width: 700px;
+      height: 500px;
+      overflow: auto;
+      position: relative;
+    }
+
+    .box1 {
+      width: 1000px;
+      height: 80px;
+      background-color: yellow;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    .tr {
+      width: 50px;
+      height: 100%;
+      position: relative;
+      margin-left: 200px;
+    }
+
+    .childItem {
+      width: 100px;
+      height: 200px;
+      background-color: red;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .box2 {
+      width: 1000px;
+      height: 1000px;
+      background-color: green;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scrollbox">
+    <div class="box1">
+      <div class="tr">
+        <div class="childItem"></div>
+      </div>
+    </div>
+    <div class="box2">这是内容 </div>
+  </div>
+</body>
+
+</html>
